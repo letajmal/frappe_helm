@@ -230,7 +230,7 @@ persistence:
     enabled: true
     # existingClaim: ""
     size: 8Gi
-    # storageClass: "nfs"
+    storageClass: "openebs-hostpath"
   logs:
     # Container based log search and analytics stack recommended
     enabled: false
