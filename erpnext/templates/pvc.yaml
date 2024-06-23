@@ -2,6 +2,10 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
+  {{- with .Values.persistence.worker.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   labels:
     app: {{ template "erpnext.name" . }}
     chart: {{ template "erpnext.chart" . }}

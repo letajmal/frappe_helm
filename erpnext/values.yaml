@@ -227,6 +227,8 @@ socketio:
 
 persistence:
   worker:
+    annotations:
+      argocd.argoproj.io/sync-options: Delete=false
     enabled: true
     # existingClaim: ""
     size: 8Gi
